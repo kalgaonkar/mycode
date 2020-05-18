@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"annotations":{},"name":"netpol-1","namespace":"test"},"spec":{"podSelector":{},"policyTypes":["Ingress","Egress"]}}
+  creationTimestamp: "2020-05-14T15:56:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        f:policyTypes: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-05-14T15:56:58Z"
+  name: netpol-1
+  namespace: test
+  resourceVersion: "659568"
+  selfLink: /apis/networking.k8s.io/v1/namespaces/test/networkpolicies/netpol-1
+  uid: 47379067-4516-4fc5-861e-def36db92eda
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
